@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+$theme-font-family: 'Poppins', Helvetica, Arial, serif, -apple-system;
+$black-color: #000;
+$white-color: #fff;
+$primary-color: #192943;
+$secondary-color: #D8D1B5;
+$warn-color: #FF4D4F;
+$success-color: #259117;
+$yellow-color: #FFC312;
+$pink-color: #B53471;
+$green-color: #009432;
+$blue-color: #1B1464;
+$border-radius: 10px;
+$border-color: #d9d9d9;
+$border-default: 1px solid $border-color;
+$border-primary: 1px solid $primary-color;
+$color-one: #f39c12;
+$color-two: #1abc9c;
+
+$form-label-color: #818E9B;
+$form-input-value-color: #323C47;
+$form-border-color: #D3D8DD;
+
+@mixin btn {
+  display: inline-block;
+  height: 40px;
+  position: relative;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: 1px;
+  padding: 8px 16px;
+  border: 2px solid transparent;
+  border-color: rgba($black-color, 0.85);
+  border-radius: 4px;
+  color: rgba($black-color, 0.85);
+  background: $white-color;
+  text-align: center;
+  white-space: nowrap;
+  background-image: none;
+  -webkit-box-shadow: 0 2px 0 rgba($black-color, 0.015);
+  box-shadow: 0 2px 0 rgba($black-color, 0.015);
+  cursor: pointer;
+  -webkit-transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  touch-action: manipulation;
+}
+
+@mixin btn-primary {
+  background: $primary-color;
+  border-color: $primary-color;
+  color: $white-color;
+
+  &:hover {
+    background: $white-color;
+    color: $primary-color;
+  }
+}
+
+@mixin btn-success {
+  background: $success-color;
+  border-color: $success-color;
+  color: $white-color;
+
+  &:hover {
+    background: $white-color;
+    color: $success-color;
+  }
+}

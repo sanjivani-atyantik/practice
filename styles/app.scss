@@ -1,0 +1,887 @@
+@import 'theme.scss';
+
+//===== Header =========================================================================
+.nav-main {
+    background-color: $white-color;
+    position: relative;
+
+    &.sticky-header {
+        position: fixed;
+        width: 100%;
+        z-index: 11;
+    }
+
+    .navbar {
+        display: flex;
+        flex-flow: row;
+        justify-content: space-between;
+        box-shadow: 0px 0px 10px -3px $primary-color;
+
+        @media (max-width: 1024px) {
+            flex-wrap: wrap;
+        }
+
+        .navbrand {
+            @media (max-width: 1024px) {
+                width: 100%;
+            }
+
+            .brand {
+                .logo-kc-line {
+                    display: block;
+                    background: url(../assets/images/logo.png) no-repeat center center;
+                    background-size: contain;
+                    height: 80px;
+                    width: 150px;
+                }
+            }
+
+            .hamburger-menu-btn {
+                display: none;
+
+                svg g, svg path {
+                    fill: $black-color;
+                }
+
+                .btn-open {
+                    height: 20px;
+                }
+                .btn-close {
+                    display: none;
+                }
+                
+                &.active .btn-open {
+                    display: none;
+                }
+                
+                &.active .btn-close {
+                    display: -webkit-box;
+                    display: flex;
+                }
+                
+                @media (max-width: 1024px) {
+                    position: absolute;
+                    top: 32px;
+                    right: 60px;
+                    display: -webkit-box;
+                    display: flex;
+                    -webkit-box-orient: horizontal;
+                    -webkit-box-direction: normal;
+                    flex-direction: row;
+                    -webkit-box-pack: center;
+                    justify-content: center;
+                    -webkit-box-align: center;
+                    align-items: center;
+                    cursor: pointer;
+                    border: none;
+                    outline: none;
+                    background: none;
+                    -webkit-transition: all 0.35s ease;
+                    transition: all 0.35s ease;
+                }
+            }
+        }
+
+        .menu {
+            width: 100%;
+            height: 0;
+            margin: 0px;
+            overflow: hidden;
+            -webkit-transition: all 0.5s ease;
+            transition: all 0.5s ease;
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+    
+            .menu-item {
+                margin: 0px 20px;
+                
+                @media (max-width: 1600px) {
+                    margin: 0px 15px;
+                }
+
+                @media (max-width: 1440px) {
+                    margin: 0px 10px;
+                }
+
+                @media (max-width: 1024px) {
+                    margin: 0px;
+                }
+
+                &.menu-link {
+                    padding: 30px 5px 27px 5px;
+                    border-bottom: 3px solid transparent;
+
+                    @media (max-width: 1024px) {
+                        padding: 10px;
+                    }
+
+                    a {
+                        font-family: $theme-font-family;
+                        font-size: 1rem;
+                        line-height: 20px;
+                        font-weight: 600;
+                        text-decoration: none;
+                        color: $black-color;
+
+                        .icon-search {
+                            display: inline-block;
+                            width: 20px;
+                            height: 20px;
+                            background: url(../assets/icons/search.svg) no-repeat center center;
+                            background-size: contain;
+                            display: flex;
+                        }
+                        
+                        &:hover {
+                            filter: opacity(0.7);
+                            transition: 0.3s;
+                        }
+                    }
+                    
+                    &.active {
+                        border-bottom: 3px solid $primary-color;
+                        
+                        @media (max-width: 1024px) {
+                            border-bottom: 0px solid $primary-color;
+                            border-left: 3px solid $primary-color;
+                        }
+                    }
+                    
+                    &:hover, &:focus {
+                        border-bottom: 3px solid $primary-color;
+                        transition: all 0.3s;
+                    }
+                }
+        
+                &.menu-btn {
+                    padding: 20px 5px;
+
+                    @media (max-width: 1024px) {
+                        padding: 10px;
+                    }
+
+                    a {
+                        width: auto;
+                        height: 40px;
+                        font-family: inherit;
+                        font-size: 1rem;
+                        font-weight: 700;
+                        line-height: 20px;
+                        padding: 8px 16px;
+                        border-radius: $border-radius;
+
+                        .icon-cart {
+                            display: inline-block;
+                            width: 20px;
+                            height: 20px;
+                            background: url(../assets/icons/cart-white.svg) no-repeat center center;
+                            background-size: contain;
+                            vertical-align: sub;
+                        }
+                
+                        &:hover, &:focus, &:active {
+                            box-shadow: none;
+                            outline: none;
+
+                            .icon-cart {
+                                display: inline-block;
+                                width: 20px;
+                                height: 20px;
+                                background: url(../assets/icons/cart-success.svg) no-repeat center center;
+                                background-size: contain;
+                                vertical-align: sub;
+
+                                g, path {
+                                    fill: $primary-color;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            &.active {
+                height: 100%;
+            }
+        }
+
+        @media only screen and (min-width: 1025px) {
+            .menu {
+                display: -webkit-box;
+                display: flex;
+                -webkit-box-orient: horizontal;
+                -webkit-box-direction: normal;
+                flex-direction: row;
+                align-items: center;
+                height: auto;
+                margin: 0px 20px;
+                padding: 0px;
+                width: auto;
+
+                &.main-menu {
+                    justify-content: center;
+                }
+
+                &.sub-menu {
+                    justify-content: flex-end;
+                }
+            }
+            .menu-item {
+                padding: 0;
+                margin: 0 20px;
+            }
+        }
+    }
+}
+
+//===== Section-1 =========================================================================
+.section-1 {
+    .owl-carousel {
+        width: 100%;
+
+        .owl-item {
+            height: 60vh;
+
+            .card {
+                position: relative;
+                display: flex;
+                flex-flow: column;
+                justify-content: center;
+                height: inherit;
+                padding: 4rem;
+
+                &.bg-banner-1 {
+                    background: url(../assets/images/Hero-banner.png) no-repeat center center;
+                    background-size: cover;
+                    width: 100%;
+                    height: 100%;
+                }
+
+                &-title {
+                    font-size: 3rem;
+                    font-weight: 600;
+                    margin-bottom: 2rem;
+                }
+
+                &-description {
+                    font-size: 18px;
+                    font-weight: 400;
+                    margin-bottom: 2rem;
+                }
+
+                &-btn {
+                    @include btn;
+                    width: 150px;
+                    height: 48px;
+                    line-height: 2;
+                    background: $success-color;
+                    border-color: $success-color;
+                    color: $white-color;
+                    text-transform: uppercase;
+                }
+            }
+        }
+    }
+}
+
+//===== Section-2 =========================================================================
+.section-2 {
+    padding: 60px 0px;
+    border-bottom: $border-default;
+
+    .owl-carousel {
+        width: 100%;
+
+        .owl-item {
+
+            .card {
+                position: relative;
+                display: flex;
+                width: 200px;
+                height: 250px;
+                flex-flow: column;
+                justify-content: center;
+                align-items: center;
+                padding: 0;
+                margin: 0;
+
+                &-image {
+                    height: 200px;
+                    width: 200px;
+                    margin: 0 auto;
+                    object-fit: contain;
+                }
+
+                &-title {
+                    font-size: 18px;
+                    font-weight: 400;
+                    line-height: 1;
+                    margin-top: 15px;
+                }
+            }
+        }
+    }
+}
+
+//===== Section-3 =========================================================================
+.section-3 {
+    padding: 80px 0px;
+
+    .section {
+        display: flex;
+        flex-flow: row;
+        justify-content: space-between;
+        align-items: center;
+        overflow: hidden;
+
+        &-title {
+            position: relative;
+            flex: 300px 0 0;
+
+            .card {
+                position: relative;
+                display: flex;
+                flex-flow: column;
+                justify-content: center;
+                height: inherit;
+
+                &-title {
+                    font-size: 3rem;
+                    font-weight: 600;
+                    margin-bottom: 2rem;
+                }
+
+                &-link {
+                    font-size: 18px;
+                    font-weight: 400;
+                    margin-bottom: 2rem;
+                }
+
+                &-btn {
+                    @include btn;
+                    width: 180px;
+                    height: 48px;
+                    line-height: 2;
+                    background: $success-color;
+                    border-color: $success-color;
+                    color: $white-color;
+                    text-transform: uppercase;
+                }
+            }
+        }
+
+        &-content {
+            position: relative;
+            flex: 1 1;
+            overflow: hidden;
+            
+            .owl-carousel {
+                width: 100%;
+        
+                .owl-item {
+        
+                    .card {
+                        position: relative;
+                        display: flex;
+                        width: 100%;
+                        height: auto;
+                        flex-flow: column;
+                        justify-content: center;
+                        align-items: flex-start;
+                        padding: 0;
+                        margin: 0;
+        
+                        &-image {
+                            position: relative;
+                            display: flex;
+                            height: 300px;
+                            width: 100%;
+                            margin: 0;
+                            border: $border-default;
+                            z-index: 0;
+
+                            @media (max-width: 1440px) {
+                                height: 200px;
+                            }
+        
+                            &-overlay {
+                                position: absolute;
+                                z-index: 2;
+                                height: 100%;
+                                width: 100%;
+                                background: rgba($primary-color, 0.05);
+                                display: none;
+
+                                .btn-success {
+                                    background: rgba($success-color, 0.4);
+                                    border-color: rgba($success-color, 0.4);
+                                    text-decoration: underline;
+                                    text-transform: uppercase;
+                                    width: 150px;
+                                }
+                            }
+
+                            &-stripe {
+                                position: absolute;
+                                z-index: 1;
+                                top: 25px;
+                                left: 0px;
+                                display: block;
+                                height: 50px;
+                                width: 5px;
+
+                                &.bg-yellow {
+                                    background: $yellow-color;
+                                }
+
+                                &.bg-pink {
+                                    background: $pink-color;
+                                }
+
+                                &.bg-green {
+                                    background: $green-color;
+                                }
+
+                                &.bg-blue {
+                                    background: $blue-color;
+                                }
+                            }
+                        }
+                        
+                        &-tags {
+                            display: flex;
+                            margin: 0;
+                            flex-flow: row;
+                            flex-wrap: wrap;
+                            
+                            .card-tag {
+                                display: inline-flex;
+                                background: #ccc;
+                                padding: 3px 5px;
+                                margin: 10px 10px 0 0;
+                                border-radius: 5px;
+                                font-size: 12px;
+                                line-height: 1;
+                            }
+                        }
+                        
+                        &-sub-title {
+                            font-size: 16px;
+                            font-weight: 400;
+                            line-height: 1;
+                            margin: 10px 0 0 0;
+                        }
+                        
+                        &-title, &-price {
+                            font-size: 18px;
+                            font-weight: 500;
+                            line-height: 1;
+                            margin: 10px 0 0 0;
+                        }
+                        
+                        &:hover {
+                            cursor: pointer;
+
+                            .card-image {
+                                .card-image-overlay {
+                                    display: flex;
+                                    flex-flow: column;
+                                    justify-content: center;
+                                    align-items: center;
+                                    flex: 1 1;
+
+                                    .btn:hover {
+                                        background: $success-color;
+                                        color: $white-color;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+//===== Section-4 =========================================================================
+.section-4 {
+    .product-cards {
+        display: flex;
+        width: 100%;
+        height: 80vh;
+
+        @media (max-width: 1024px) {
+            height: 60vh;
+        }
+
+        .col-2 {
+            flex: 66.666% 0 0;
+        }
+
+        .col-1 {
+            flex: 33.333% 0 0;
+
+            &.d-flex-col {
+                display: flex;
+                flex-flow: column;
+            }
+        }
+
+        .product {
+            position: relative;
+
+            &-bg {
+                display: block;
+                width: 100%;
+                height: 100%;
+            }
+
+            &.bg-cartridges {
+                background: url(../assets/images/bg-cartridges.png) no-repeat center center;
+                background-size: cover;
+            }
+
+            &.bg-pre-rolls {
+                background: url(../assets/images/bg-pre-rolls.png) no-repeat center center;
+                background-size: cover;
+            }
+
+            &.bg-edibles {
+                background: url(../assets/images/bg-edibles.png) no-repeat center center;
+                background-size: cover;
+            }
+
+            &-title {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                font-size: 3rem;
+                font-weight: 600;
+                color: $white-color;
+                margin: 0;
+
+                @media (max-width: 1024px) {
+                    font-size: 2rem;
+                }
+            }
+        }
+    }
+}
+
+//===== Section-5 =========================================================================
+.section-5 {
+    padding: 80px 0;
+    border-bottom: $border-default;
+
+    .product-cards {
+        position: relative;
+        display: flex;
+        flex-flow: row;
+        justify-content: space-between;
+        align-items: flex-start;
+
+        .card {
+            display: flex;
+            flex: 30% 0 0;
+            flex-flow: column;
+
+            &-image {
+                display: block;
+                width: 100%;
+                height: 500px;
+
+                @media (max-width: 1440px) {
+                    height: 350px;
+                }
+
+                @media (max-width: 1024px) {
+                    height: 250px;
+                }
+
+                &.bg-kiva {
+                    background: url(../assets/images/kiva-edibles.png) no-repeat center center;
+                    background-size: cover;
+                }
+
+                &.bg-bloom {
+                    background: url(../assets/images/hybrid-top-shelf-3.5-grams.png) no-repeat center center;
+                    background-size: cover;
+                }
+
+                &.bg-korova {
+                    background: url(../assets/images/korova.png) no-repeat center center;
+                    background-size: cover;
+                }
+            }
+
+            &-title {
+                font-size: 24px;
+                font-weight: 600;
+                margin: 15px 0 0 0;
+            }
+
+            &-link {
+                font-size: 16px;
+                font-weight: 400;
+                margin: 15px 0 0 0;
+            }
+
+            &-btn {
+                @include btn;
+                width: 240px;
+                height: 48px;
+                line-height: 2;
+                background: $success-color;
+                border-color: $success-color;
+                color: $white-color;
+                text-transform: uppercase;
+                margin: 15px 0 0 0;
+            }
+        }
+    }
+}
+
+//===== Section-6 =========================================================================
+.section-6 {
+    padding: 80px 0px;
+    border-bottom: $border-default;
+
+    .section {
+        display: flex;
+        flex-flow: column;
+        overflow: hidden;
+
+        &-title {
+            position: relative;
+            flex: 1 1;
+            margin-bottom: 60px;
+
+            .card {
+                position: relative;
+                display: flex;
+                flex-flow: column;
+                justify-content: center;
+                align-items: center;
+                height: inherit;
+
+                &-title {
+                    font-size: 3rem;
+                    font-weight: 600;
+                    margin-bottom: 20px;
+                }
+
+                &-link {
+                    font-size: 18px;
+                    font-weight: 400;
+                    margin-bottom: 20px;
+                }
+
+                &-btn {
+                    @include btn;
+                    width: 180px;
+                    height: 48px;
+                    line-height: 2;
+                    background: $success-color;
+                    border-color: $success-color;
+                    color: $white-color;
+                    text-transform: uppercase;
+                }
+            }
+        }
+
+        &-content {
+            position: relative;
+            flex: 1 1;
+            overflow: hidden;
+            
+            .owl-carousel {
+                width: 100%;
+        
+                .owl-item {
+        
+                    .card {
+                        position: relative;
+                        display: flex;
+                        width: 100%;
+                        height: auto;
+                        flex-flow: column;
+                        justify-content: center;
+                        align-items: flex-start;
+                        padding: 0;
+                        margin: 0;
+        
+                        &-image {
+                            position: relative;
+                            display: flex;
+                            height: 300px;
+                            width: 100%;
+                            margin: 0;
+                            border: $border-default;
+                            z-index: 0;
+
+                            @media (max-width: 1440px) {
+                                height: 200px;
+                            }
+        
+                            &-overlay {
+                                position: absolute;
+                                z-index: 2;
+                                height: 100%;
+                                width: 100%;
+                                background: rgba($primary-color, 0.05);
+                                display: none;
+
+                                .btn-success {
+                                    background: rgba($success-color, 0.4);
+                                    border-color: rgba($success-color, 0.4);
+                                    text-decoration: underline;
+                                    text-transform: uppercase;
+                                    width: 150px;
+                                }
+                            }
+                        }
+                        
+                        &-sub-title {
+                            font-size: 16px;
+                            font-weight: 400;
+                            line-height: 1;
+                            margin: 10px 0 0 0;
+                        }
+                        
+                        &-title, &-price {
+                            font-size: 18px;
+                            font-weight: 500;
+                            line-height: 1;
+                            margin: 10px 0 0 0;
+                        }
+                        
+                        &:hover {
+                            cursor: pointer;
+
+                            .card-image {
+                                .card-image-overlay {
+                                    display: flex;
+                                    flex-flow: column;
+                                    justify-content: center;
+                                    align-items: center;
+                                    flex: 1 1;
+
+                                    .btn:hover {
+                                        background: $success-color;
+                                        color: $white-color;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+//===== Footer =========================================================================
+.footer {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: auto;
+    color: $black-color;
+    
+    .main-footer {
+        background: $white-color;
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+
+        .d-flex-row {
+            display: flex;
+            flex-flow: row;
+            justify-content: flex-start;
+
+            .card {
+                display: block;
+                flex: 250px 0 0;
+
+                &-title {
+                    font-size: 16px;
+                    font-weight: 600;
+                    margin: 0 0 20px 0;
+                }
+
+                &-links {
+                    padding: 0;
+                    margin: 0;
+                    list-style: none;
+
+                    li {
+                        font-size: 16px;
+                        line-height: 2;
+                    }
+                }
+            }
+
+            .card-signup {
+                flex: 400px 0 0;
+                margin-left: auto;
+
+                .card-title {
+                    font-size: 28px;
+                    font-weight: 600;
+                    margin: 0 0 20px 0;
+                }
+
+                .card-sub-title {
+                    font-size: 16px;
+                    margin: 0 0 20px 0;
+                }
+
+                .sign-up-form {
+                    position: relative;
+                    display: flex;
+                    height: 50px;
+                    font-size: 16px;
+                    
+                    .form-input {
+                        flex: 1 1;
+                        border-radius: $border-radius;
+                        margin-right: -15px;
+                        padding: 8px 16px;
+                        background: #eee;
+                        border-color: transparent;
+
+                        &:focus {
+                            border-color: transparent;
+                            outline: none;
+                            box-shadow: none;
+                        }
+                    }
+
+                    .form-button {
+                        flex: 100px 0 0;
+                        height: 50px;
+                        border-radius: $border-radius;
+                        text-transform: uppercase;
+
+                        &:hover {
+                            background: #eee;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .sub-footer {
+        display: block;
+        background: #ddd;
+        padding: 30px 0px;
+
+        .copyright-text {
+            margin: 0;
+        }
+    }
+}
+
