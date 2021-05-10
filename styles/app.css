@@ -657,13 +657,6 @@
   display: -ms-flexbox;
   display: flex;
   width: 100%;
-  height: 80vh;
-}
-
-@media (max-width: 1024px) {
-  .section-4 .product-cards {
-    height: 60vh;
-  }
 }
 
 .section-4 .product-cards .col-2 {
@@ -695,22 +688,24 @@
 .section-4 .product-cards .product-bg {
   display: block;
   width: 100%;
-  height: 100%;
 }
 
 .section-4 .product-cards .product.bg-cartridges {
   background: url(../assets/images/bg-cartridges.png) no-repeat center center;
   background-size: cover;
+  padding-top: 56.25%;
 }
 
 .section-4 .product-cards .product.bg-pre-rolls {
   background: url(../assets/images/bg-pre-rolls.png) no-repeat center center;
   background-size: cover;
+  padding-top: 56.25%;
 }
 
 .section-4 .product-cards .product.bg-edibles {
   background: url(../assets/images/bg-edibles.png) no-repeat center center;
   background-size: cover;
+  padding-top: 56.25%;
 }
 
 .section-4 .product-cards .product-title {
@@ -736,13 +731,6 @@
   display: -ms-flexbox;
   display: flex;
   width: 100%;
-  height: 80vh;
-}
-
-@media (max-width: 1024px) {
-  .section-4a .product-cards {
-    height: 60vh;
-  }
 }
 
 .section-4a .product-cards .col-2 {
