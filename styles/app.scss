@@ -510,11 +510,6 @@
     .product-cards {
         display: flex;
         width: 100%;
-        height: 80vh;
-
-        @media (max-width: 1024px) {
-            height: 60vh;
-        }
 
         .col-2 {
             flex: 66.666% 0 0;
@@ -535,22 +530,24 @@
             &-bg {
                 display: block;
                 width: 100%;
-                height: 100%;
             }
 
             &.bg-cartridges {
                 background: url(../assets/images/bg-cartridges.png) no-repeat center center;
                 background-size: cover;
+                padding-top: 56.25%;
             }
 
             &.bg-pre-rolls {
                 background: url(../assets/images/bg-pre-rolls.png) no-repeat center center;
                 background-size: cover;
+                padding-top: 56.25%;
             }
 
             &.bg-edibles {
                 background: url(../assets/images/bg-edibles.png) no-repeat center center;
                 background-size: cover;
+                padding-top: 56.25%;
             }
 
             &-title {
@@ -576,11 +573,6 @@
     .product-cards {
         display: flex;
         width: 100%;
-        height: 80vh;
-
-        @media (max-width: 1024px) {
-            height: 60vh;
-        }
 
         .col-2 {
             flex: 66.666% 0 0;
