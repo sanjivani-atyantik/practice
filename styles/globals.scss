@@ -1,0 +1,81 @@
+@import 'theme.scss';
+
+*,::after,::before{box-sizing:border-box}
+html{font-family:$theme-font-family;line-height:1.15;-webkit-text-size-adjust:100%;-webkit-tap-highlight-color:transparent}
+body {margin: 0px; font-family: $theme-font-family;-webkit-font-smoothing: antialiased;-moz-osx-font-smoothing: grayscale;background: $white-color !important;color: rgba($black-color, 0.9);}
+code {font-family: $theme-font-family;}
+[tabindex="-1"]:focus{outline:0!important}
+hr{box-sizing:content-box;height:0;overflow:visible; border-top: $border-default !important;}
+hr{margin-top:1rem;margin-bottom:1rem;border:0;border-top:1px solid rgba(0,0,0,.1)}
+p{margin-top:0;margin-bottom:1rem}
+a{cursor:pointer;text-decoration:none;background-color:transparent; color: $primary-color;}
+a:hover{color:darken($primary-color, 5);}
+img{vertical-align:middle;border-style:none}
+table{border-collapse:collapse;}
+label{display:inline-block;margin-bottom:.5rem}
+audio{outline: none; width: 450px;}
+p, label, input, button, textarea {font-family: $theme-font-family;}
+textarea {font-size: 14px !important;line-height: 1.5 !important;resize: none !important;}
+.h1,.h2,.h3,.h4,.h5,.h6,h1,h2,h3,h4,h5,h6{margin-top:0;margin-bottom:.5rem;font-weight:500;line-height:1.2}
+.h1,h1{font-size:2.5rem}
+.h2,h2{font-size:2rem}
+.h3,h3{font-size:1.75rem}
+.h4,h4{font-size:1.5rem}
+.h5,h5{font-size:1.25rem}
+.h6,h6{font-size:1rem}
+.container{width:100%;padding-right:15px;padding-left:15px;margin-right:auto;margin-left:auto}
+@media (min-width:576px) {.container{max-width:540px}}
+@media (min-width:768px) {.container{max-width:720px}}
+@media (min-width:992px) {.container{max-width:960px}}
+@media (min-width:1200px) {.container{max-width:1140px}}
+.container-fluid{width:100%;padding:0px 4rem;margin-right:auto;margin-left:auto}
+// Change bg in autofill textbox
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  box-shadow: 0 0 0 20px #fff inset !important;
+  -webkit-box-shadow: 0 0 0 20px #fff inset !important;
+}
+// Change text in autofill textbox
+input:-webkit-autofill {
+  -webkit-text-fill-color: $black-color !important;
+}
+
+.no-pad {padding: 0px !important;}
+.no-mrg {margin: 0px !important;}
+.pad20 {padding: 20px !important;}
+.pt0 {padding-top: 0px !important;}
+.pb0 {padding-bottom: 0px !important;}
+.pl0 {padding-left: 0px !important;}
+.pr0 {padding-right: 0px !important;}
+.mt0 {margin-top: 0px !important;}
+.mb0 {margin-bottom: 0px !important;}
+.ml0 {margin-left: 0px !important;}
+.mr0 {margin-right: 0px !important;}
+.ml-auto { margin-left: auto !important;}
+.m-t-10 {margin-top: 10px;}
+.hidden {display: none !important;}
+.w100 {width: 100%;}
+.pull-left {float: left !important;}
+.pull-right {float: right !important;}
+.text-left {text-align: left !important;}
+.text-center {text-align: center !important;}
+.text-right {text-align: right !important;}
+.text-black {color: $black-color;}
+.text-white {color: $white-color;}
+.text-primary {color: $primary-color;}
+.list-style-none {list-style-type: none;}
+.border-bottom {border-bottom: $border-default;}
+
+.btn {
+  @include btn;
+}
+
+.btn-primary {
+  @include btn-primary;
+}
+
+.btn-success {
+  @include btn-success;
+}
