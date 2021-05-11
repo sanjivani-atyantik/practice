@@ -816,24 +816,26 @@
   -webkit-box-shadow: 0 0 10px 2px #eaeaea;
           box-shadow: 0 0 10px 2px #eaeaea;
   border-radius: 10px;
-  width: 500px;
+  width: 1024px;
   position: relative;
 }
 
 .notification .card-image {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-line-pack: center;
-      align-content: center;
-  -webkit-box-flex: 100px;
-      -ms-flex: 100px 0 0px;
-          flex: 100px 0 0;
+  position: relative;
+  width: 100px;
   height: 100px;
   border: 1px solid #dddddd6b;
   border-radius: 20px;
-  margin-right: 20px;
-  padding: 15px;
+  padding-top: 10%;
+}
+
+.notification .card-image img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
 }
 
 .notification .card-content {
@@ -847,26 +849,32 @@
   -webkit-box-direction: normal;
       -ms-flex-flow: column;
           flex-flow: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  margin-left: 20px;
 }
 
 .notification .card-content h3 {
-  font-size: 21px;
+  font-size: 22px;
   font-weight: bold;
+  width: calc(100% - 25px);
+  word-break: break-word;
 }
 
 .notification .card-content p {
   font-size: 18px;
   margin-bottom: 10px;
   color: #636363;
+  word-break: break-word;
 }
 
 .notification .card-content a {
   color: #636363;
-  font-size: 14px;
+  font-size: 16px;
   text-decoration: underline;
+  word-break: break-word;
+  margin-top: auto;
 }
 
 .notification .card-close-link {
@@ -874,6 +882,73 @@
   top: 10px;
   right: 15px;
   font-size: 24px;
+  font-weight: 500;
+}
+
+@media (max-width: 1240px) {
+  .notification .card {
+    width: 768px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .notification .card {
+    width: 520px;
+  }
+}
+
+@media (max-width: 768px) {
+  .notification .card {
+    width: 480px;
+  }
+}
+
+@media (max-width: 520px) {
+  .notification .card {
+    width: 420px;
+  }
+}
+
+@media (max-width: 480px) {
+  .notification .card {
+    width: 360px;
+  }
+  .notification .card-image {
+    width: 80px;
+    height: 80px;
+  }
+  .notification .card-content {
+    margin-left: 10px;
+  }
+  .notification .card-content h3 {
+    font-size: 16px;
+    width: calc(100% - 20px);
+  }
+  .notification .card-content p {
+    font-size: 14px;
+  }
+  .notification .card-content a {
+    font-size: 12px;
+  }
+  .notification .card-close-link {
+    top: 5px;
+    right: 10px;
+  }
+}
+
+@media (max-width: 380px) {
+  .notification .card {
+    width: 280px;
+  }
+  .notification .card-content h3 {
+    font-size: 14px;
+  }
+  .notification .card-content p {
+    font-size: 12px;
+  }
+  .notification .card-content a {
+    font-size: 11px;
+  }
 }
 
 .section-5 {
