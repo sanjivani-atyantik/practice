@@ -39,26 +39,28 @@
             .hamburger-menu-btn {
                 display: none;
 
-                svg g, svg path {
+                svg g,
+                svg path {
                     fill: $black-color;
                 }
 
                 .btn-open {
                     height: 20px;
                 }
+
                 .btn-close {
                     display: none;
                 }
-                
+
                 &.active .btn-open {
                     display: none;
                 }
-                
+
                 &.active .btn-close {
                     display: -webkit-box;
                     display: flex;
                 }
-                
+
                 @media (max-width: 1024px) {
                     position: absolute;
                     top: 32px;
@@ -92,10 +94,10 @@
             list-style-type: none;
             padding: 0;
             margin: 0;
-    
+
             .menu-item {
                 margin: 0px 20px;
-                
+
                 @media (max-width: 1600px) {
                     margin: 0px 15px;
                 }
@@ -132,28 +134,29 @@
                             background-size: contain;
                             display: flex;
                         }
-                        
+
                         &:hover {
                             filter: opacity(0.7);
                             transition: 0.3s;
                         }
                     }
-                    
+
                     &.active {
                         border-bottom: 3px solid $primary-color;
-                        
+
                         @media (max-width: 1024px) {
                             border-bottom: 0px solid $primary-color;
                             border-left: 3px solid $primary-color;
                         }
                     }
-                    
-                    &:hover, &:focus {
+
+                    &:hover,
+                    &:focus {
                         border-bottom: 3px solid $primary-color;
                         transition: all 0.3s;
                     }
                 }
-        
+
                 &.menu-btn {
                     padding: 20px 5px;
 
@@ -179,8 +182,10 @@
                             background-size: contain;
                             vertical-align: sub;
                         }
-                
-                        &:hover, &:focus, &:active {
+
+                        &:hover,
+                        &:focus,
+                        &:active {
                             box-shadow: none;
                             outline: none;
 
@@ -192,7 +197,8 @@
                                 background-size: contain;
                                 vertical-align: sub;
 
-                                g, path {
+                                g,
+                                path {
                                     fill: $primary-color;
                                 }
                             }
@@ -227,6 +233,7 @@
                     justify-content: flex-end;
                 }
             }
+
             .menu-item {
                 padding: 0;
                 margin: 0 20px;
@@ -375,12 +382,12 @@
             position: relative;
             flex: 1 1;
             overflow: hidden;
-            
+
             .owl-carousel {
                 width: 100%;
-        
+
                 .owl-item {
-        
+
                     .card {
                         position: relative;
                         display: flex;
@@ -391,7 +398,7 @@
                         align-items: flex-start;
                         padding: 0;
                         margin: 0;
-        
+
                         &-image {
                             position: relative;
                             display: flex;
@@ -404,7 +411,7 @@
                             @media (max-width: 1440px) {
                                 height: 200px;
                             }
-        
+
                             &-overlay {
                                 position: absolute;
                                 z-index: 2;
@@ -448,13 +455,13 @@
                                 }
                             }
                         }
-                        
+
                         &-tags {
                             display: flex;
                             margin: 0;
                             flex-flow: row;
                             flex-wrap: wrap;
-                            
+
                             .card-tag {
                                 display: inline-flex;
                                 background: #ccc;
@@ -465,21 +472,22 @@
                                 line-height: 1;
                             }
                         }
-                        
+
                         &-sub-title {
                             font-size: 16px;
                             font-weight: 400;
                             line-height: 1;
                             margin: 10px 0 0 0;
                         }
-                        
-                        &-title, &-price {
+
+                        &-title,
+                        &-price {
                             font-size: 18px;
                             font-weight: 500;
                             line-height: 1;
                             margin: 10px 0 0 0;
                         }
-                        
+
                         &:hover {
                             cursor: pointer;
 
@@ -592,7 +600,9 @@
             width: 100%;
             height: auto;
 
-            &-cartridge, &-prerolls, &-edibles {
+            &-cartridge,
+            &-prerolls,
+            &-edibles {
                 padding-top: 56.25%;
             }
 
@@ -617,7 +627,7 @@
                 @media (max-width: 1024px) {
                     font-size: 2rem;
                 }
-            } 
+            }
         }
     }
 }
@@ -647,7 +657,7 @@
             border: 1px solid #dddddd6b;
             border-radius: 20px;
             padding-top: 10%;
-            
+
             img {
                 position: absolute;
                 top: 0;
@@ -657,10 +667,10 @@
                 height: 100%;
             }
         }
-        
+
         &-content {
             display: flex;
-            flex:1 1;
+            flex: 1 1;
             flex-flow: column;
             justify-content: flex-start;
             margin-left: 20px;
@@ -727,9 +737,11 @@
                     font-size: 16px;
                     width: calc(100% - 20px);
                 }
+
                 p {
                     font-size: 14px;
                 }
+
                 a {
                     font-size: 12px;
                 }
@@ -748,9 +760,11 @@
                 h3 {
                     font-size: 14px;
                 }
+
                 p {
                     font-size: 12px;
                 }
+
                 a {
                     font-size: 11px;
                 }
@@ -884,12 +898,12 @@
             position: relative;
             flex: 1 1;
             overflow: hidden;
-            
+
             .owl-carousel {
                 width: 100%;
-        
+
                 .owl-item {
-        
+
                     .card {
                         position: relative;
                         display: flex;
@@ -900,7 +914,7 @@
                         align-items: flex-start;
                         padding: 0;
                         margin: 0;
-        
+
                         &-image {
                             position: relative;
                             display: flex;
@@ -913,7 +927,7 @@
                             @media (max-width: 1440px) {
                                 height: 200px;
                             }
-        
+
                             &-overlay {
                                 position: absolute;
                                 z-index: 2;
@@ -931,21 +945,22 @@
                                 }
                             }
                         }
-                        
+
                         &-sub-title {
                             font-size: 16px;
                             font-weight: 400;
                             line-height: 1;
                             margin: 10px 0 0 0;
                         }
-                        
-                        &-title, &-price {
+
+                        &-title,
+                        &-price {
                             font-size: 18px;
                             font-weight: 500;
                             line-height: 1;
                             margin: 10px 0 0 0;
                         }
-                        
+
                         &:hover {
                             cursor: pointer;
 
@@ -978,7 +993,7 @@
     width: 100%;
     height: auto;
     color: $black-color;
-    
+
     .main-footer {
         background: $white-color;
         padding-top: 4rem;
@@ -1031,7 +1046,7 @@
                     display: flex;
                     height: 50px;
                     font-size: 16px;
-                    
+
                     .form-input {
                         flex: 1 1;
                         border-radius: $border-radius;
@@ -1073,3 +1088,211 @@
     }
 }
 
+//===== Feature Card =========================================================================
+.store-card {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-content: flex-start;
+    height: auto;
+    margin: 25px;
+    padding: 0px;
+    border: 1px solid #ddd;
+    border-radius: 25px;
+
+    .card-image {
+        position: relative;
+        width: 70%;
+        height: auto;
+        padding-top: 47%;
+        border-radius: 25px;
+        overflow: hidden;
+
+        img {
+            position: absolute;
+            width: 100%;
+            height: auto;
+            display: block;
+            top: 0;
+            left: 0;
+        }
+
+        .card-tag {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: #38c1cf;
+            padding: 10px 15px;
+            border-radius: 15px;
+            max-width: 50%;
+
+            span {
+                font-size: 24px;
+                font-weight: 500;
+                letter-spacing: 1px;
+                color: #fff;
+                text-transform: uppercase;
+                word-break: break-word;
+            }
+        }
+    }
+
+    .card-content {
+        padding: 20px;
+        display: flex;
+        width: 30%;
+        flex-direction: column;
+        align-content: flex-start;
+        justify-content: flex-start;
+
+        .card-title {
+            font-size: 36px;
+            font-weight: 600;
+            margin-bottom: 15px;
+            word-break: break-word;
+        }
+
+        .card-category {
+            font-size: 24px;
+            color: #636f77;
+            word-break: break-word;
+        }
+
+        .dot-divider {
+            content: '';
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            background: #636f77;
+            border-radius: 50%;
+            vertical-align: middle;
+            margin: 0px 8px;
+        }
+
+        .card-detail {
+            font-size: 24px;
+            color: #a6aeb3;
+            word-break: break-word;
+
+            .card-price-symbol {
+                font-weight: 500;
+            }
+
+            .card-price-value {
+                position: relative;
+            }
+
+            .card-time {
+                position: relative;
+
+                &-icon {
+                    position: relative;
+                }
+
+                &-count {
+                    position: relative;
+                }
+
+                &-unit {
+                    position: relative;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 1240px) {
+        .card-image {
+            padding-top: 47%;
+        }
+    }
+
+    @media (max-width: 1024px) {
+        flex-direction: column;
+        margin: 20px;
+
+        .card-image {
+            width: 100%;
+            padding-top: 67%;
+        }
+
+        .card-content {
+            width: 100%;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .card-image {
+            width: 100%;
+        }
+
+        .card-content {
+            width: 100%;
+        }
+    }
+
+    @media (max-width: 480px) {
+        margin: 15px;
+
+        .card-image {
+            .card-tag {
+                padding: 5px 10px;
+
+                span {
+                    font-size: 16px;
+                }
+            }
+        }
+
+        .card-content {
+            padding: 15px;
+
+            .card-title {
+                font-size: 24px;
+            }
+            .card-category {
+                font-size: 18px;
+            }
+            .card-detail {
+                font-size: 18px;
+            }
+        }
+    }
+
+    @media (max-width: 380px) {
+        .card-content {
+            .card-title {
+                font-size: 22px;
+            }
+            .card-category {
+                font-size: 16px;
+            }
+            .card-detail {
+                font-size: 16px;
+            }
+        }
+    }
+
+    @media (max-width: 320px) {
+        .card-image {
+            .card-tag {
+                padding: 5px 10px;
+                
+                span {
+                    font-size: 12px;
+                }
+            }
+        }
+
+        .card-content {
+            .card-title {
+                font-size: 20px;
+            }
+            .card-category {
+                font-size: 14px;
+            }
+            .card-detail {
+                font-size: 14px;
+            }
+        }
+    }
+}

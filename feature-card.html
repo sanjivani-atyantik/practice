@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,initial-scale=1,user-scalable=yes" />
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta http-equiv="cleartype" content="on" />
+
+    <title>KING'S CREW</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon.png">
+
+    <meta name="description" content="KING'S CREW" />
+    <meta name="keywords" content="KING'S CREW" />
+
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="KING'S CREW" />
+    <meta property="og:description" content="KING'S CREW Description" />
+    <meta property="og:site_name" content="KING'S CREW" />
+    <meta name="msapplication-TileColor" content="#192943" />
+    <meta name="theme-color" content="#192943" />
+
+    <link rel="stylesheet" href="styles/globals.css">
+    <link rel="stylesheet" href="styles/app.css">
+    <link rel="stylesheet" href="styles/owl.carousel.min.css">
+    <link rel="stylesheet" href="styles/owl.theme.default.min.css">
+
+</head>
+
+<body>
+
+    <div class="store-card">
+        <div class="card-image">
+            <img src="assets/images/bg-cartridges.png" />
+            <div class="card-tag">
+                <span>BESTSELLER</span>
+            </div>
+        </div>
+        <div class="card-content">
+            <h2 class="card-title">Frank Vork's Groenten, Fruit & Traiteur</h2>
+            <p class="card-category">
+                <span>Bakery</span>
+                <span class="dot-divider"></span>
+                <span>Organic</span>
+            </p>
+            <p class="card-detail">
+                <span class="card-price-symbol">&euro;</span>
+                <span class="card-price-symbol">&euro;</span>
+                <span class="dot-divider"></span>
+                <span>&harrw;</span>
+                <span class="card-price-symbol">&euro;</span>
+                <span class="card-price-value">2.99</span>
+                <span class="dot-divider"></span>
+                <span class="card-time">
+                    <span class="card-time-icon">&#128338;</span>
+                    <span class="card-time-count">60</span>
+                    <span class="card-time-unit">min</span>
+                </span>
+            </p>
+        </div>
+    </div>
+
+    <!-- ============================================================== -->
+    <script src="./scripts/jquery.min.js"></script>
+    <script src="./scripts/owl.carousel.min.js"></script>
+    <script src="./scripts/custom.js?v=20200430112000"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#preRollProductCarousel").load("preroll-product-carousel.html");
+            $("#rewardProductCarousel").load("reward-product-carousel.html");
+            $("#ediblesProductCarousel").load("edibles-product-carousel.html");
+            $("#flowerProductCarousel").load("flower-product-carousel.html");
+        });
+    </script>
+</body>
+
+</html>
